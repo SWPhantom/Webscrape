@@ -83,7 +83,7 @@ public class Run {
 		Elements content;
 		String list = "";
 		try {
-			doc = Jsoup.connect(url).timeout(500).userAgent("Webscrape").get();
+			doc = Jsoup.connect(url).timeout(1000).userAgent("Webscrape").get();
 			content = doc.getElementsByTag(tag);
 			//temp1 = doc.toString();
 			list = content.toString();
