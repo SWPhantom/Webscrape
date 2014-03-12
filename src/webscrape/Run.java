@@ -19,7 +19,7 @@ import org.jsoup.select.Elements;
 
 
 public class Run {
-	//Assuming that we can have an infinite set of valid letters.
+	//Assuming that we can have an infinite set of valid characters.
 	static Map<String, Integer> counter = new TreeMap<String, Integer>();
 	public static void main(String[] args) {
 		//Create a wordlist from the given site and tag.
@@ -30,7 +30,7 @@ public class Run {
 			dissectWord(wordlist.get(i));
 		}
 		
-		//Get a value ordered SortedSet from the TreeMap.
+		//Get a value ordered SortedSet from the TreeMap and remove counter.
 		List<Entry<String, Integer>> orderedList = valSort(counter);
 		counter = null;
 		
